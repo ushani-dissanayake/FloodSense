@@ -1,0 +1,120 @@
+{
+  "synthetic": {
+    "rows": 1000,
+    "rule_reconstructs_labels": 0.615,
+    "note": "The documented 4.97/8.0 m and 59.97/200 mm tree reconstructs only part of flood_data.csv. Random Forest still scores 100% on a random split of that same synthetic file, which is overfitting, not field skill.",
+    "tree_rules": {
+      "high_rainfall_mm": 200.0,
+      "high_water_m": 8.0,
+      "medium_rainfall_mm": 59.97,
+      "medium_water_m": 4.97
+    }
+  },
+  "field": {
+    "rows": 231,
+    "stations": 4,
+    "window": [
+      "dry",
+      "flood"
+    ],
+    "source": "Irrigation Department via nuuuwan/lk_irrigation + Open-Meteo rain",
+    "accuracy_vs_official_stages": 0.7576,
+    "missed_official_high": 21,
+    "false_model_high": 0,
+    "confusion_matrix": [
+      [
+        166,
+        21,
+        0
+      ],
+      [
+        14,
+        2,
+        0
+      ],
+      [
+        14,
+        7,
+        7
+      ]
+    ],
+    "classification_report": {
+      "LOW/Normal": {
+        "precision": 0.8556701030927835,
+        "recall": 0.8877005347593583,
+        "f1-score": 0.8713910761154856,
+        "support": 187.0
+      },
+      "MEDIUM/Alert": {
+        "precision": 0.06666666666666667,
+        "recall": 0.125,
+        "f1-score": 0.08695652173913043,
+        "support": 16.0
+      },
+      "HIGH/Minor+Major": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1-score": 0.4,
+        "support": 28.0
+      },
+      "accuracy": 0.7575757575757576,
+      "macro avg": {
+        "precision": 0.64077892325315,
+        "recall": 0.42090017825311943,
+        "f1-score": 0.4527825326182054,
+        "support": 231.0
+      },
+      "weighted avg": {
+        "precision": 0.8185150473810268,
+        "recall": 0.7575757575757576,
+        "f1-score": 0.7599196345516099,
+        "support": 231.0
+      }
+    },
+    "by_station": {
+      "attanagalu-jaela": {
+        "rows": 44,
+        "accuracy": 0.6364,
+        "official_high": 14,
+        "model_high": 3,
+        "water_min": 0.54,
+        "water_max": 6.92,
+        "rain_max": 288.2
+      },
+      "gin-gampaha": {
+        "rows": 65,
+        "accuracy": 0.6769,
+        "official_high": 6,
+        "model_high": 0,
+        "water_min": 1.06,
+        "water_max": 4.3,
+        "rain_max": 93.9
+      },
+      "kalu-millaniya": {
+        "rows": 59,
+        "accuracy": 0.7458,
+        "official_high": 4,
+        "model_high": 0,
+        "water_min": 0.28,
+        "water_max": 4.28,
+        "rain_max": 148.3
+      },
+      "kelani-seethawaka": {
+        "rows": 63,
+        "accuracy": 0.9365,
+        "official_high": 4,
+        "model_high": 4,
+        "water_min": 0.43,
+        "water_max": 8.55,
+        "rain_max": 201.6
+      }
+    },
+    "label": {
+      "0": "DMC Normal (below alert)",
+      "1": "DMC Alert",
+      "2": "DMC Minor or Major flood"
+    },
+    "note": "Ground truth is the official Irrigation Department / DMC stage at the nearest gauge. Rain is Open-Meteo daily precipitation. This is not the synthetic CSV label."
+  },
+  "headline": "Synthetic rule leakage 62%; field accuracy vs DMC stages 75.8%"
+}

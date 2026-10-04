@@ -1,0 +1,11 @@
+## Copy this file to local.properties and fill in local values.
+## local.properties is machine-specific and should not be zipped for submission.
+
+sdk.dir=/Users/YOUR_NAME/Library/Android/sdk
+
+# text.lk SMS. Paste your API token locally. Demo sends at most 2 messages.
+textlk.api.token=
+textlk.sender.id=TextLKDemo
+
+# FastAPI Random Forest. Emulator uses 10.0.2.2. A real phone needs your laptop LAN IP.
+ml.api.base=http://10.0.2.2:8000

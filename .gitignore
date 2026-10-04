@@ -1,0 +1,76 @@
+# ==============================
+# macOS / OS files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Android Studio / IntelliJ
+# ==============================
+.idea/
+.gradle/
+.kotlin/
+*.iml
+build/
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+hs_err_pid*.log
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# ==============================
+# Node.js
+# ==============================
+node_modules/
+functions/node_modules/
+
+# ==============================
+# Environment / Secret files
+# ==============================
+.env
+.env.*
+functions/.env
+*.pem
+*.key
+
+# ==============================
+# Firebase / Google credentials
+# ==============================
+serviceAccountKey.json
+service-account*.json
+firebase-adminsdk*.json
+google-services.json
+
+# ==============================
+# Temporary / Office files
+# ==============================
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# ==============================
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# Archives / Backups
+# ==============================
+*.zip
+*.rar
+
+# ESP32 local credentials
+secrets.h
+**/secrets.h
